@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Akademik Liberalisme</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="landing" class="landing-page">
+    <div class="hero-content">
+        <div class="logo">MODUL PENDIDIKAN v4.0</div>
+        <h1 class="main-title">ANALISIS LIBERALISME</h1>
+        <p class="topic-sub">TOPIK: KEBEBASAN, HAK INDIVIDU & KESAN SOSIAL</p>
+        
+        <div class="team-credits">
+            <h3>DIKEMBANGKAN OLEH:</h3>
+            <p>Mohairy • Muhammad Irfan • Muhammad Khairul</p>
+            <p>Nur Ismat • Abdul Mirza • Rushydee</p>
+        </div>
+
+        <button class="start-btn" onclick="initializeSystem()">JOM BELAJAR</button>
+    </div>
+</section>
+
+<div id="main-interface" style="display: none;">
+    <header>
+        <div class="logo">AKADEMI_LIBERAL_v4.0</div>
+        <h1>MODUL PEMIKIRAN POLITIK</h1>
+    </header>
+
+    <nav class="slide-nav">
+        <button class="nav-btn active" onclick="showSection('notes', this)">NOTA KULIAH</button>
+        <button class="nav-btn" onclick="showSection('flashcards', this)">KAD REVIZ</button>
+        <button class="nav-btn" onclick="showSection('quiz', this)">PENILAIAN (15)</button>
+        <button class="nav-btn" onclick="showSection('comments', this)">KOMEN</button>
+    </nav>
+
+    <main class="container">
+        <section id="notes" class="slide-section active-slide">
+            <div id="note-slider">
+                
+                <div class="note-slide active-note">
+                    <div class="glass-card">
+                        <h2>1.0 DEFINISI, FALSAFAH & AKAR SEJARAH</h2>
+                        <p><strong>Liberalisme</strong> adalah satu falsafah politik yang meletakkan <strong>kebebasan individu</strong> sebagai nilai tertinggi dalam organisasi sosial. Ia berkembang daripada penentangan terhadap feudalisme dan teokrasi di Eropah.</p>
+                        
+                        
+
+                        <div class="layer-box">
+                            <h4>A. Hak Semula Jadi (Natural Rights)</h4>
+                            <p>Menurut <strong>John Locke</strong>, setiap manusia memiliki hak yang diberikan oleh Tuhan (Inalienable Rights) yang tidak boleh dirampas oleh kerajaan. Tiga hak utama ini adalah <strong>Nyawa (Life)</strong>, <strong>Kebebasan (Liberty)</strong>, dan <strong>Harta (Property)</strong>. Fungsi tunggal kerajaan adalah untuk melindungi hak-hak ini.</p>
+                        </div>
+
+                        <div class="layer-box">
+                            <h4>B. Rasionalisme & Kontrak Sosial</h4>
+                            <p>Liberalisme menganggap manusia sebagai makhluk rasional yang mampu membuat keputusan terbaik untuk diri mereka sendiri. <strong>Kontrak Sosial</strong> menghujahkan bahawa rakyat memberikan mandat kepada pemerintah hanya untuk menjaga ketenteraman; jika kerajaan menjadi zalim, rakyat berhak menarik balik mandat tersebut.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="note-slide">
+                    <div class="glass-card">
+                        <h2>2.0 ANALISIS KEBAIKAN (KELEBIHAN SISTEMIK)</h2>
+                        <p>Sistem liberalisme telah menjadi asas kepada kemajuan negara-negara maju moden melalui mekanisme berikut:</p>
+                        
+                        
+
+                        <div class="layer-box">
+                            <h4>A. Kedaulatan Undang-Undang & Demokrasi</h4>
+                            <p>Mekanisme <strong>Semak dan Imbang (Checks and Balances)</strong> antara badan Eksekutif, Perundangan, dan Kehakiman memastikan kuasa tidak berpusat pada satu tangan. Ini melindungi rakyat daripada penindasan dan menjamin hak asasi minoriti terpelihara daripada "Tirani Majoriti".</p>
+                        </div>
+
+                        <div class="layer-box">
+                            <h4>B. Dinamisme Ekonomi & Inovasi</h4>
+                            <p>Melalui model <strong>Pasaran Bebas</strong>, individu bebas bersaing untuk mencipta nilai. Persaingan ini memacu kemajuan teknologi dan perubatan. Sebagai contoh, kebebasan akademik dan insentif harta intelek membolehkan penemuan sains berlaku dengan lebih pantas berbanding sistem terkawal.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="note-slide">
+                    <div class="glass-card">
+                        <h2>3.0 KRITIKAN, KEBURUKAN & CABARAN</h2>
+                        <p>Walaupun berjaya meningkatkan kualiti hidup, liberalisme menghadapi kritikan tajam dari sudut moral dan ekonomi:</p>
+
+                        
+
+                        <div class="layer-box danger-border">
+                            <h4>A. Ketidaksamaan Ekonomi yang Ekstrem</h4>
+                            <p>Kritikan utama (sering dikaitkan dengan Marxisme) menyatakan bahawa pasaran bebas tanpa regulasi menyebabkan kekayaan tertumpu kepada pemilik modal (borjuis). Ini mewujudkan jurang sosial yang luas di mana golongan miskin sukar untuk mendaki tangga mobiliti sosial walaupun bekerja keras.</p>
+                        </div>
+
+                        <div class="layer-box danger-border">
+                            <h4>B. Erosi Institusi Tradisional</h4>
+                            <p>Penekanan melampau terhadap <strong>Individualisme</strong> boleh menyebabkan "Atomisme Sosial"—keadaan di mana ikatan kekeluargaan, nilai agama, dan tanggungjawab komuniti menjadi lemah. Ini sering dikaitkan dengan peningkatan masalah kesihatan mental dan rasa kesunyian dalam masyarakat moden.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="note-nav">
+                <button class="f-btn" onclick="changeNote(-1)">SEBELUMNYA</button>
+                <span id="note-index">Topik 1 / 3</span>
+                <button class="f-btn" onclick="changeNote(1)">SETERUSNYA</button>
+            </div>
+        </section>
+
+        <section id="flashcards" class="slide-section" style="display:none;">
+            <h2 class="center">KAD IMBASAN REVIZ (25)</h2>
+            <div class="flashcard-viewer" id="flashcard-container"></div>
+            <div class="flash-nav">
+                <button class="f-btn" onclick="changeCard(-1)">SEBELUM</button>
+                <span id="card-index">1 / 25</span>
+                <button class="f-btn" onclick="changeCard(1)">SELEPAS</button>
+            </div>
+        </section>
+
+        <section id="quiz" class="slide-section" style="display:none;">
+            <h2 class="center">PENILAIAN AKADEMIK (15 SOALAN)</h2>
+            <div id="quiz-list">
+                <div class="q">01. Hak 'Hayat, Kebebasan, Harta' dipelopori oleh John Locke. <button onclick="q(this,true)">BENAR</button><button onclick="q(this,false)">SALAH</button></div>
+                <div class="q">02. Liberalisme ekonomi menolak sepenuhnya perdagangan bebas. <button onclick="q(this,false)">BENAR</button><button onclick="q(this,true)">SALAH</button></div>
+                <div class="q">03. Checks and Balances menghalang penyalahgunaan kuasa. <button onclick="q(this,true)">BENAR</button><button onclick="q(this,false)">SALAH</button></div>
+                <div class="q">04. Sekularisme bermaksud agama digabungkan dengan pentadbiran. <button onclick="q(this,false)">BENAR</button><button onclick="q(this,true)">SALAH</button></div>
+                <div class="q">05. Kontrak Sosial adalah persetujuan rakyat dan pemerintah. <button onclick="q(this,true)">BENAR</button><button onclick="q(this,false)">SALAH</button></div>
+                <div class="q">06. Rule of Law bermaksud pemerintah tidak tertakluk kepada undang-undang. <button onclick="q(this,false)">BENAR</button><button onclick="q(this,true)">SALAH</button></div>
+                <div class="q">07. Individualisme melampau boleh melemahkan ikatan komuniti. <button onclick="q(this,true)">BENAR</button><button onclick="q(this,false)">SALAH</button></div>
+                <div class="q">08. Adam Smith adalah tokoh utama liberalisme ekonomi. <button onclick="q(this,true)">BENAR</button><button onclick="q(this,false)">SALAH</button></div>
+                <div class="q">09. Zaman Enlightenment adalah tempoh kelahiran liberalisme. <button onclick="q(this,true)">BENAR</button><button onclick="q(this,false)">SALAH</button></div>
+                <div class="q">10. Liberalisme menyokong monarki mutlak tanpa had. <button onclick="q(this,false)">BENAR</button><button onclick="q(this,true)">SALAH</button></div>
+                <div class="q">11. Mobiliti sosial lebih mudah dalam sistem pasaran terbuka. <button onclick="q(this,true)">BENAR</button><button onclick="q(this,false)">SALAH</button></div>
+                <div class="q">12. Marxisme mengkritik liberalisme kerana isu ketidaksamaan. <button onclick="q(this,true)">BENAR</button><button onclick="q(this,false)">SALAH</button></div>
+                <div class="q">13. 'Harm Principle' bermaksud bebas buat apa sahaja walaupun sakitkan orang. <button onclick="q(this,false)">BENAR</button><button onclick="q(this,true)">SALAH</button></div>
+                <div class="q">14. Neoliberalisme menyokong penswastaan banyak sektor awam. <button onclick="q(this,true)">BENAR</button><button onclick="q(this,false)">SALAH</button></div>
+                <div class="q">15. Pluralisme meraikan kepelbagaian pendapat dan budaya. <button onclick="q(this,true)">BENAR</button><button onclick="q(this,false)">SALAH</button></div>
+            </div>
+            <div id="quiz-result"></div>
+        </section>
+
+        <section id="comments" class="slide-section" style="display:none;">
+            <div class="glass-card">
+                <h2>RUANG DISKUSI</h2>
+                <div class="comment-input-area">
+                    <input type="text" id="comment-name" placeholder="Nama Akademik anda..." class="acad-input">
+                    <textarea id="comment-text" placeholder="Berikan pendapat atau maklum balas anda..." class="acad-input"></textarea>
+                    <button class="f-btn" onclick="addComment()">HANTAR MAKLUM BALAS</button>
+                </div>
+                <div id="comment-display" style="margin-top: 20px;"></div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script>
+    let currentNoteIndex = 0;
+    let currentCardIndex = 0;
+    let score = 0; let answered = 0;
+    const TOTAL_QUIZ = 15;
+
+    // 25 Kad IMBASAN
+    const cardData = [
+        {q: "Bapa Liberalisme Klasik?", a: "John Locke"}, {q: "Maksud 'Liber'?", a: "Bebas"},
+        {q: "Tiga Hak Locke?", a: "Hayat, Bebas, Harta"}, {q: "Pelopor Ekonomi?", a: "Adam Smith"},
+        {q: "Prinsip Bahaya?", a: "Harm Principle (JS Mill)"}, {q: "Zaman Kelahiran?", a: "Enlightenment"},
+        {q: "Unit Asas?", a: "Individu"}, {q: "Maksud Sekularisme?", a: "Asing Agama & Politik"},
+        {q: "Maksud Pluralisme?", a: "Terima Kepelbagaian"}, {q: "Kebaikan Politik?", a: "Demokrasi"},
+        {q: "Keburukan Ekonomi?", a: "Jurang Kekayaan"}, {q: "Maksud Laissez-faire?", a: "Pasaran Tanpa Gangguan"},
+        {q: "Tujuan Rule of Law?", a: "Saksama di bawah Undang2"}, {q: "Semak & Imbang?", a: "Checks & Balances"},
+        {q: "Maksud Egalitarian?", a: "Kesamarataan Hak"}, {q: "Kontrak Sosial?", a: "Mandat Rakyat"},
+        {q: "Erosi Nilai?", a: "Hilang Tradisi/Moral"}, {q: "Maksud Neoliberal?", a: "Pasaran Bebas Ekstrem"},
+        {q: "Had Kuasa Kerajaan?", a: "Perlembagaan"}, {q: "Kesan Individualisme?", a: "Atomisasi Sosial"},
+        {q: "Hak Minoriti?", a: "Dilindungi Perlembagaan"}, {q: "Inovasi Dipacu?", a: "Persaingan Bebas"},
+        {q: "Tujuan Pendidikan?", a: "Pemikiran Kritis"}, {q: "Hak Bersuara?", a: "Freedom of Speech"},
+        {q: "Kritikan Sosialis?", a: "Eksploitasi Pekerja"}
+    ];
+
+    function initializeSystem() {
+        document.getElementById('landing').style.display = 'none';
+        document.getElementById('main-interface').style.display = 'block';
+        renderFlashcards();
+    }
+
+    function showSection(id, btn) {
+        document.querySelectorAll('.slide-section').forEach(s => s.style.display = 'none');
+        document.getElementById(id).style.display = 'block';
+        document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+    }
+
+    function changeNote(dir) {
+        const slides = document.querySelectorAll('.note-slide');
+        slides[currentNoteIndex].classList.remove('active-note');
+        currentNoteIndex = (currentNoteIndex + dir + slides.length) % slides.length;
+        slides[currentNoteIndex].classList.add('active-note');
+        document.getElementById('note-index').innerText = `Topik ${currentNoteIndex + 1} / 3`;
+    }
+
+    function renderFlashcards() {
+        const container = document.getElementById('flashcard-container');
+        container.innerHTML = cardData.map((c, i) => `
+            <div class="flashcard ${i===0?'active-card':''}" onclick="this.classList.toggle('flipped')">
+                <div class="inner"><div class="front">${c.q}</div><div class="back">${c.a}</div></div>
+            </div>`).join('');
+    }
+
+    function changeCard(dir) {
+        const cards = document.querySelectorAll('.flashcard');
+        cards[currentCardIndex].classList.remove('active-card', 'flipped');
+        currentCardIndex = (currentCardIndex + dir + cards.length) % cards.length;
+        cards[currentCardIndex].classList.add('active-card');
+        document.getElementById('card-index').innerText = `${currentCardIndex + 1} / 25`;
+    }
+
+    function q(btn, isCorrect) {
+        if (btn.parentElement.classList.contains('locked')) return;
+        btn.parentElement.classList.add('locked');
+        answered++;
+        if (isCorrect) { score++; btn.style.background = "#27ae60"; btn.style.color = "white"; }
+        else { btn.style.background = "#c0392b"; btn.style.color = "white"; }
+        if (answered === TOTAL_QUIZ) {
+            document.getElementById('quiz-result').innerHTML = `<div class="glass-card">Skor Akhir: ${score} / ${TOTAL_QUIZ}</div>`;
+        }
+    }
+
+    function addComment() {
+        const name = document.getElementById('comment-name').value;
+        const text = document.getElementById('comment-text').value;
+        if(name === "" || text === "") return;
+        const display = document.getElementById('comment-display');
+        const div = document.createElement('div');
+        div.className = 'layer-box';
+        div.innerHTML = `<strong>${name}:</strong><p>${text}</p>`;
+        display.prepend(div);
+        document.getElementById('comment-name').value = "";
+        document.getElementById('comment-text').value = "";
+    }
+</script>
+
+<style>
+    /* Slider & Input Styling */
+    .note-slide { display: none; }
+    .active-note { display: block; animation: fadeIn 0.5s ease; }
+    .note-nav { display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 20px; }
+    .acad-input { width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid #ddd; font-family: 'Georgia', serif; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+</style>
+</body>
+</html>
